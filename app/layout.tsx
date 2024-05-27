@@ -1,8 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto, Merriweather } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: '--font-roboto'
+});
+
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: '--font-merriweather'
+});
 
 export const metadata: Metadata = {
   title: "Die Glanzfabrik",
@@ -16,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cn("font-sans", roboto.variable, merriweather.variable)}>{children}</body>
     </html>
   );
 }
