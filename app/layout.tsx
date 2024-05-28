@@ -3,20 +3,21 @@ import type { Metadata } from "next";
 import { Roboto, Merriweather } from "next/font/google";
 import { cn } from "@/lib/utils";
 import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
 import "@/styles/base.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500"],
   display: "swap",
-  variable: '--font-roboto'
+  variable: "--font-roboto",
 });
 
 const merriweather = Merriweather({
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "swap",
-  variable: '--font-merriweather'
+  variable: "--font-merriweather",
 });
 
 export const metadata: Metadata = {
@@ -31,19 +32,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("font-sans bg-neutral-950 text-white/80", roboto.variable, merriweather.variable)} itemScope itemType="https://schema.org/AutoBodyShop">
+      <body
+        className={cn(
+          "font-sans bg-neutral-950 text-white/80",
+          roboto.variable,
+          merriweather.variable
+        )}
+        itemScope
+        itemType="https://schema.org/AutoBodyShop"
+      >
         <meta itemProp="name" content="Die Glanzfabrik GmbH" />
         <meta itemProp="location" content="Riehen, Schweiz" />
 
         <a
           href="#content"
           className="button button-primary fixed left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-full rounded-t-none transition-transform focus-visible:translate-y-0"
-          >Zum Inhalt springen</a
         >
+          Zum Inhalt springen
+        </a>
 
         <Navigation />
-  
-        {children}
+
+        <main>{children}</main>
+
+        <Footer />
       </body>
     </html>
   );
