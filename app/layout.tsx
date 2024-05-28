@@ -53,7 +53,7 @@ export default function RootLayout({
 
         <Navigation />
 
-        <main>{children}</main>
+        <main id="content">{children}</main>
 
         <Footer />
       </body>
