@@ -13,7 +13,6 @@ export default function FooterCta() {
         fill
         sizes="100vw"
         style={{ objectFit: "cover" }}
-        className="gradient-bg"
       />
 
       <div className="z-10 mx-auto max-w-3xl text-center">
