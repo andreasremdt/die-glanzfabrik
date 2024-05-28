@@ -1,7 +1,9 @@
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Roboto, Merriweather } from "next/font/google";
-import "./globals.css";
 import { cn } from "@/lib/utils";
+import Navigation from "@/components/navigation";
+import "@/styles/base.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -25,11 +27,24 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={cn("font-sans", roboto.variable, merriweather.variable)}>{children}</body>
+      <body className={cn("font-sans bg-neutral-950 text-white/80", roboto.variable, merriweather.variable)} itemScope itemType="https://schema.org/AutoBodyShop">
+        <meta itemProp="name" content="Die Glanzfabrik GmbH" />
+        <meta itemProp="location" content="Riehen, Schweiz" />
+
+        <a
+          href="#content"
+          className="button button-primary fixed left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-full rounded-t-none transition-transform focus-visible:translate-y-0"
+          >Zum Inhalt springen</a
+        >
+
+        <Navigation />
+  
+        {children}
+      </body>
     </html>
   );
 }
