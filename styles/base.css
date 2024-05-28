@@ -10,10 +10,7 @@
 
 @layer components {
   .gradient-bg {
-    @apply relative bg-cover bg-center after:absolute after:inset-0 after:bg-gradient-to-r after:from-rose-500/15 after:to-indigo-500/15;
-
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      var(--background-image);
+    @apply relative bg-cover bg-center after:absolute after:inset-0 after:bg-gradient-to-r after:from-rose-500/25 after:to-indigo-500/25 before:inset-0 before:absolute before:bg-black/45 before:z-10;
   }
 
   .skew-b {

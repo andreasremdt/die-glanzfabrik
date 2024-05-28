@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Logo from "@/public/images/logo.png";
+import logo from "@/public/images/logo.png";
 import { cn } from "@/lib/utils";
 import useMediaQuery from "@/hooks/use-media-query";
 import useFocusTrap from "@/hooks/use-focus-trap";
@@ -63,7 +63,8 @@ export default function Navigation() {
       <Image
         alt=""
         className="max-w-[60vw]"
-        src={Logo}
+        src={logo}
+        quality={75}
         width="350"
         height="57"
         priority
