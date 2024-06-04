@@ -20,13 +20,6 @@ export default function FooterCta() {
           Vereinbaren Sie noch heute einen Termin für Ihr Fahrzeug
         </h2>
 
-        <p className="mb-8 text-lg">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod eum
-          modi est nesciunt fuga repudiandae, quibusdam aspernatur magni laborum
-          consectetur, corrupti suscipit? Vitae animi quis fuga odio possimus
-          delectus ratione.
-        </p>
-
         <Link href="/kontakt" className="button-primary">
           Termin vereinbaren{" "}
           <svg viewBox="0 0 24 24" className="h-5 w-5">
