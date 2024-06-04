@@ -9,6 +9,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,css,mjs,json}\""
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
     "@hookform/resolvers": "^3.4.2",
     "clsx": "^2.1.1",
     "leaflet": "^1.9.4",
