@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function useMediaQuery(width: number) {
-  let [matches, setMatches] = useState<boolean>(false);
+  let [matches, setMatches] = useState(false);
 
   function handleMediaChange(event: MediaQueryList | MediaQueryListEvent) {
     setMatches(event.matches);
