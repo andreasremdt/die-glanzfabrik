@@ -2,8 +2,8 @@
 
 import { type ComponentProps, useRef, useEffect } from "react";
 import L from "leaflet";
-import marker from "@/public/images/marker-icon.png";
-import markerShadow from "@/public/images/marker-shadow.png";
+import marker from "@/public/icons/marker-icon.png";
+import markerShadow from "@/public/icons/marker-shadow.png";
 import "leaflet/dist/leaflet.css";
 
 type Props = ComponentProps<"div">;

@@ -17,7 +17,7 @@ export function escapeHtml(data: ContactFormData) {
   }
 
   return Object.fromEntries(
-    Object.entries(data).map(([key, value]) => [key, replace(value)])
+    Object.entries(data).map(([key, value]) => [key, replace(value)]),
   ) as ContactFormData;
 }
 

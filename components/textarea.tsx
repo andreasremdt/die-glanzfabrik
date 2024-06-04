@@ -8,7 +8,7 @@ type Props = ComponentProps<"textarea"> & {
 
 export default forwardRef(function Input(
   { error, label, id, className, required, ...props }: Props,
-  ref: Ref<HTMLTextAreaElement>
+  ref: Ref<HTMLTextAreaElement>,
 ) {
   return (
     <div className={className}>
@@ -34,7 +34,7 @@ export default forwardRef(function Input(
 
       {error ? (
         <p
-          className="text-rose-300 text-sm mt-1"
+          className="mt-1 text-sm text-rose-300"
           aria-live="assertive"
           id={`${id}-error`}
         >

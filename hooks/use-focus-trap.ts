@@ -22,7 +22,7 @@ export default function useFocusTrap(active: boolean) {
         }
       }
     },
-    [active]
+    [active],
   );
 
   useEffect(() => {

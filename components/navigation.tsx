@@ -44,7 +44,7 @@ export default function Navigation() {
         setVisible(false);
       }
     },
-    [visible]
+    [visible],
   );
 
   useEffect(() => {
@@ -74,10 +74,10 @@ export default function Navigation() {
         type="button"
         onClick={() => setVisible((previous) => !previous)}
         className={cn(
-          "menu-toggle text-white outline-none relative z-20 h-5 w-8 transition-all ease-in-out focus:text-rose-500 lg:hidden",
+          "menu-toggle relative z-20 h-5 w-8 text-white outline-none transition-all ease-in-out focus:text-rose-500 lg:hidden",
           {
             "is-open": visible,
-          }
+          },
         )}
         aria-label={`${visible ? "schließe" : "öffne"} das menü`}
         aria-expanded={visible}
@@ -103,7 +103,7 @@ export default function Navigation() {
           {
             "is-open": visible,
             invisible: isMobile && !visible,
-          }
+          },
         )}
         id="navigation"
         aria-label="hauptnavigation"
@@ -119,7 +119,7 @@ export default function Navigation() {
               "transition-colors hover:text-rose-500 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
               link.href === pathname
                 ? "border-b-2 border-rose-500 text-rose-500 focus-visible:outline-rose-500"
-                : "text-white focus-visible:outline-white"
+                : "text-white focus-visible:outline-white",
             )}
           >
             {link.label}

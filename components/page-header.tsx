@@ -17,7 +17,7 @@ export default function PageHeader({
   children,
 }: Props) {
   return (
-    <header className="gradient-bg skew-b -mt-28 pt-28 relative">
+    <header className="gradient-bg skew-b relative -mt-28 pt-28">
       <Image
         src={background}
         alt=""
@@ -34,7 +34,7 @@ export default function PageHeader({
           {
             "h-80": size === "normal",
             "pb-40 pt-24 sm:pb-80 sm:pt-48": size === "large",
-          }
+          },
         )}
       >
         <h1

@@ -34,9 +34,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "font-sans bg-neutral-950 text-white/80",
+          "bg-neutral-950 font-sans text-white/80",
           roboto.variable,
-          merriweather.variable
+          merriweather.variable,
         )}
         itemScope
         itemType="https://schema.org/AutoBodyShop"

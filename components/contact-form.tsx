@@ -52,7 +52,7 @@ export default function ContactForm() {
 
       <div
         className={cn("transition-opacity", {
-          "opacity-50 pointer-events-none blur-sm": state.sent,
+          "pointer-events-none opacity-50 blur-sm": state.sent,
         })}
       >
         <div className="mb-4 flex flex-col gap-4 sm:flex-row">

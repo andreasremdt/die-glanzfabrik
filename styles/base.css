@@ -10,7 +10,7 @@
 
 @layer components {
   .gradient-bg {
-    @apply relative bg-cover bg-center after:absolute after:inset-0 after:bg-gradient-to-r after:from-rose-500/25 after:to-indigo-500/25 before:inset-0 before:absolute before:bg-black/45 before:z-10;
+    @apply relative bg-cover bg-center before:absolute before:inset-0 before:z-10 before:bg-black/45 after:absolute after:inset-0 after:bg-gradient-to-r after:from-rose-500/25 after:to-indigo-500/25;
   }
 
   .skew-b {
@@ -45,7 +45,9 @@
     mask-repeat: repeat, repeat;
     mask-clip: content-box, border-box;
     mask-origin: content-box, border-box;
-    mask-position: 0% 0%, 0% 0%;
+    mask-position:
+      0% 0%,
+      0% 0%;
     mask-size: auto, auto;
     mask-image: linear-gradient(black, black), linear-gradient(black, black);
     mask-composite: exclude;
@@ -85,7 +87,7 @@
 
   .button-primary,
   .button-secondary {
-    @apply fancy-border hover-effect inline-flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-md bg-gradient-to-r px-6 py-3 text-sm font-medium  text-white backdrop-blur-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none sm:text-base;
+    @apply fancy-border hover-effect inline-flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-md bg-gradient-to-r px-6 py-3 text-sm font-medium text-white backdrop-blur-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none sm:text-base;
   }
 
   .button-primary {
@@ -105,7 +107,7 @@
   }
 
   .input {
-    @apply block w-full rounded-lg border-2 border-white/15 bg-transparent px-4 py-3 transition-colors hover:border-white/25  focus-visible:border-white/50 focus-visible:outline-none aria-[invalid]:border-rose-300/50 aria-[invalid]:hover:border-rose-300/75 aria-[invalid]:focus:border-rose-300;
+    @apply block w-full rounded-lg border-2 border-white/15 bg-transparent px-4 py-3 transition-colors hover:border-white/25 focus-visible:border-white/50 focus-visible:outline-none aria-[invalid]:border-rose-300/50 aria-[invalid]:hover:border-rose-300/75 aria-[invalid]:focus:border-rose-300;
   }
 
   .menu-toggle:is(.is-open) span:nth-child(1) {
