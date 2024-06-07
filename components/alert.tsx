@@ -1,14 +1,19 @@
-type Props = {
+import { cn } from "@/lib/utils";
+import type { ComponentProps } from "react";
+
+type Props = ComponentProps<"div"> & {
   title: string;
   description: string;
 };
 
-export default function Alert({ title, description }: Props) {
+export default function Alert({
+  title,
+  description,
+  className,
+  ...props
+}: Props) {
   return (
-    <div
-      role="alert"
-      className="absolute bottom-20 left-0 right-0 animate-fade-in py-4 text-center"
-    >
+    <div {...props} role="alert" className={cn("py-4 text-center", className)}>
       <p className="h3 mb-2">{title}</p>
       <p>{description}</p>
     </div>

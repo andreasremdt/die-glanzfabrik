@@ -129,6 +129,7 @@ export default function ContactForm() {
 
       {state.sent ? (
         <Alert
+          className="absolute bottom-20 left-0 right-0 animate-fade-in"
           title={
             state.error
               ? "Das hat leider nicht geklappt..."

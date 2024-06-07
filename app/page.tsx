@@ -7,6 +7,7 @@ import PageHeader from "@/components/page-header";
 import Outside from "@/public/images/ford-mustang-outside.jpg";
 import Inside from "@/public/images/ford-mustang-inside.jpg";
 import Rating from "@/components/rating";
+import ContactDialog from "@/components/contact-dialog";
 
 export default function Page() {
   return (
@@ -18,12 +19,10 @@ export default function Page() {
       Wertes und seiner Langlebigkeit. Dafür sind wir der richtige Ansprechpartner."
       >
         <div className="flex animate-[fade-in_0.75s_ease-in-out_1s_both] flex-wrap justify-center gap-1">
-          <Link href="/leistungen" className="button-primary">
+          <Link href="/leistungen" className="button-secondary">
             Unsere Leistungen
           </Link>
-          <Link href="/kontakt" className="button-secondary">
-            Termin vereinbaren
-          </Link>
+          <ContactDialog />
         </div>
       </PageHeader>
 

@@ -32,3 +32,12 @@ export let contactFormSchema = z.object({
 
 export type ContactFormData = z.output<typeof contactFormSchema>;
 export type ContactFormSchema = z.infer<typeof contactFormSchema>;
+
+export let requestOfferSchema = contactFormSchema.extend({
+  package: z.string(),
+  extras: z.array(z.string()),
+  carType: z.string(),
+});
+
+export type RequestOfferData = z.output<typeof requestOfferSchema>;
+export type RequestOfferSchema = z.infer<typeof requestOfferSchema>;

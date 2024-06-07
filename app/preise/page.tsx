@@ -5,6 +5,7 @@ import Outside from "@/public/images/ford-mustang-outside.jpg";
 import Inside from "@/public/images/ford-mustang-inside.jpg";
 import ExtraServices from "@/public/images/angelo-cleaning-mustang.jpg";
 import PricingTable from "@/components/pricing-table";
+import ContactDialog from "@/components/contact-dialog";
 
 export default function Page() {
   return (
@@ -34,7 +35,7 @@ export default function Page() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+        <div className="my-16 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
           <figure className="gradient-image hidden overflow-hidden rounded-2xl lg:block">
             <Image
               placeholder="blur"
@@ -113,6 +114,8 @@ export default function Page() {
             <PricingTable prices={[149, 179, 179, 179, 179, 20]} />
           </article>
         </div>
+
+        <ContactDialog />
       </section>
 
       <section
@@ -133,7 +136,7 @@ export default function Page() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+        <div className="mb-16 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
           <figure className="gradient-image hidden overflow-hidden rounded-2xl lg:block">
             <Image
               placeholder="blur"
@@ -222,6 +225,8 @@ export default function Page() {
             <PricingTable prices={[259, 299, 329, 349, 399]} />
           </article>
         </div>
+
+        <ContactDialog />
       </section>
 
       <section
@@ -241,7 +246,7 @@ export default function Page() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
+        <div className="mb-16 grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
           <article
             className="box flex flex-col items-start"
             itemProp="itemListElement"
@@ -292,6 +297,8 @@ export default function Page() {
             </ul>
           </article>
         </div>
+
+        <ContactDialog />
       </section>
 
       <section

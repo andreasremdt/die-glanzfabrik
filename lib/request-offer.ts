@@ -1,9 +1,9 @@
 "use server";
 
-import { type ContactFormData, contactFormSchema } from "@/lib/schemas";
+import { type RequestOfferSchema, requestOfferSchema } from "@/lib/schemas";
 
-export default async function send(data: ContactFormData) {
-  let result = contactFormSchema.safeParse(data);
+export default async function requestOffer(data: RequestOfferSchema) {
+  let result = requestOfferSchema.safeParse(data);
 
   if (!result.success) {
     return { error: true };
@@ -31,6 +31,9 @@ export default async function send(data: ContactFormData) {
             <li><b>E-Mail:</b> ${result.data.email}</li>
             <li><b>Adresse:</b> ${result.data.zipcode} ${result.data.city}</li>
             <li><b>Telefon:</b> ${result.data.phone}</li>
+            <li><b>Gewünschtes Paket:</b> ${result.data.package}</li>
+            <li><b>Zusatzpakete:</b> ${result.data.extras.length ? `<br />${result.data.extras.join("<br />")}` : "-"}</li>
+            <li><b>Fahrzeugtyp:</b> ${result.data.carType}</li>
           </ul>
           <p>Sie können dem Absender schreiben in dem Sie direkt auf diese E-Mail antworten.</p>
         `,
