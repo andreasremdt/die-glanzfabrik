@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import ContactDialog from "@/components/contact-dialog";
 import FooterCta from "@/components/footer-cta";
 import Icon from "@/components/icon";
 import PageHeader from "@/components/page-header";
+
+export const metadata: Metadata = {
+  title: "Leistungen | Die Glanzfabrik",
+  description:
+    "Zu unseren beliebtesten Leistungen zählen die Außenreinigung, Innenreinigung, Politur, Geruchtsentfernung, Versiegelung und mehr",
+};
 
 export default function Page() {
   return (
@@ -139,6 +146,7 @@ export default function Page() {
             </p>
           </article>
         </div>
+
         <ContactDialog />
       </div>
 

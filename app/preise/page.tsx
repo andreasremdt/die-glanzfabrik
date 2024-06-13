@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import FooterCta from "@/components/footer-cta";
 import PageHeader from "@/components/page-header";
@@ -6,6 +7,12 @@ import Inside from "@/public/images/ford-mustang-inside.jpg";
 import ExtraServices from "@/public/images/angelo-cleaning-mustang.jpg";
 import PricingTable from "@/components/pricing-table";
 import ContactDialog from "@/components/contact-dialog";
+
+export const metadata: Metadata = {
+  title: "Preise | Die Glanzfabrik",
+  description:
+    "Unsere Preise sind transparent und fair. Wir bieten verschiedene Pakete mit Individualisierungsoptionen an, welche perfekt auf Sie zugeschnitten sind.",
+};
 
 export default function Page() {
   return (

@@ -8,6 +8,17 @@ import Outside from "@/public/images/ford-mustang-outside.jpg";
 import Inside from "@/public/images/ford-mustang-inside.jpg";
 import Rating from "@/components/rating";
 import ContactDialog from "@/components/contact-dialog";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Die Glanzfabrik GmbH",
+  description:
+    "Unsere Preise sind transparent und fair. Wir bieten verschiedene Pakete mit Individualisierungsoptionen an, welche perfekt auf Sie zugeschnitten sind.",
+  openGraph: {
+    title: "Die Glanzfabrik GmbH",
+    description: "",
+  },
+};
 
 export default function Page() {
   return (

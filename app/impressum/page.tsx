@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import FooterCta from "@/components/footer-cta";
 import PageHeader from "@/components/page-header";
+
+export const metadata: Metadata = {
+  title: "Impressum | Die Glanzfabrik",
+  description:
+    "Wir sind Spezialisten in der Autoreinigung und bieten Aussenreinigung, Innenreinigung, Autoaufbereitung, Geruchsentfernung, Versiegelung und mehr",
+};
 
 export default function Page() {
   return (

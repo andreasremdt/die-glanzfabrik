@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import FooterCta from "@/components/footer-cta";
 import Gallery from "@/components/gallery";
 import PageHeader from "@/components/page-header";
 import Outside from "@/public/images/ford-mustang-outside.jpg";
 import Inside from "@/public/images/ford-mustang-inside.jpg";
+
+export const metadata: Metadata = {
+  title: "Autoreinigung im Raum Basel | Die Glanzfabrik",
+  description:
+    "Wir sind Spezialisten in der Autoreinigung und bieten Aussenreinigung, Innenreinigung, Autoaufbereitung, Geruchsentfernung, Versiegelung und mehr",
+};
 
 export default function Page() {
   return (

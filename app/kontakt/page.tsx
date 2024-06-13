@@ -1,10 +1,17 @@
 "use client";
 
+import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import PageHeader from "@/components/page-header";
 import ContactForm from "@/components/contact-form";
 
 let Leaflet = dynamic(() => import("@/components/leaflet-map"), { ssr: false });
+
+export const metadata: Metadata = {
+  title: "Kontakt | Die Glanzfabrik",
+  description:
+    "Wir erstellen Ihnen gerne ein individuelles Angebot für Ihr Fahrzeug. Nehmen Sie bequem Kontakt mit uns auf und wir kümmern uns um den Rest",
+};
 
 export default function Page() {
   return (
