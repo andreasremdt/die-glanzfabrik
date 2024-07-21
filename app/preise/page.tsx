@@ -4,7 +4,7 @@ import FooterCta from "@/components/footer-cta";
 import PageHeader from "@/components/page-header";
 import Outside from "@/public/images/ford-mustang-outside.jpg";
 import Inside from "@/public/images/ford-mustang-inside.jpg";
-import ExtraServices from "@/public/images/angelo-cleaning-mustang.jpg";
+import ExtraServices from "@/public/images/ford-mustang-aussenwaesche.jpg";
 import PricingTable from "@/components/pricing-table";
 import ContactDialog from "@/components/contact-dialog";
 
@@ -229,7 +229,7 @@ export default function Page() {
               </ul>
             </div>
 
-            <PricingTable prices={[259, 299, 329, 349, 399]} />
+            <PricingTable prices={[259, 299, 349, 349, 399]} />
           </article>
         </div>
 
@@ -439,20 +439,6 @@ export default function Page() {
                   itemType="http://schema.org/Offer"
                 >
                   <td className="align-top" itemProp="name">
-                    Kunststoffteile aussen mit Kunststoffpflege behandeln
-                    (Auffrischung)
-                  </td>
-                  <td className="text-right align-top font-medium text-white">
-                    <span itemProp="price">69</span>{" "}
-                    <span itemProp="priceCurrency">CHF</span>
-                  </td>
-                </tr>
-                <tr
-                  itemProp="itemListElement"
-                  itemScope
-                  itemType="http://schema.org/Offer"
-                >
-                  <td className="align-top" itemProp="name">
                     Cabrio Stoffverdeck Reinigung & Imprägnierung
                   </td>
                   <td className="text-right align-top font-medium text-white">
@@ -519,19 +505,6 @@ export default function Page() {
                 >
                   <td className="align-top" itemProp="name">
                     Fahrzeugversiegelung je nach Produkt
-                  </td>
-                  <td className="text-right align-top font-medium text-white">
-                    <span itemProp="price">199</span>{" "}
-                    <span itemProp="priceCurrency">CHF</span>
-                  </td>
-                </tr>
-                <tr
-                  itemProp="itemListElement"
-                  itemScope
-                  itemType="http://schema.org/Offer"
-                >
-                  <td className="align-top" itemProp="name">
-                    Fahrzeug Versiegelung je nach Produkt
                   </td>
                   <td className="text-right align-top font-medium text-white">
                     <span itemProp="price">199</span>{" "}

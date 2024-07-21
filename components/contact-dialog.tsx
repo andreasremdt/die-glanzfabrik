@@ -47,21 +47,6 @@ const packages = [
   },
 ];
 
-const extras = [
-  {
-    name: "Saugen des Innenraumes",
-    description: "40 CHF",
-  },
-  {
-    name: "Teppich shampoonieren (pro Stk.)",
-    description: "40 CHF",
-  },
-  {
-    name: "Kofferraummatte shampoonieren",
-    description: "79 CHF",
-  },
-];
-
 const cars = [
   { name: "Kleinwagen & 2-Sitzer" },
   { name: "Mittelklasse & Sportwage" },
@@ -104,19 +89,19 @@ export default function ContactDialog() {
       return;
     }
 
-    if (step === 3 && !getValues("carType")) {
+    if (step === 2 && !getValues("carType")) {
       setError("carType", { message: "Bitte geben Sie Ihren Fahrzeugtyp an." });
 
       return;
     }
 
-    if (step === 4 && ref.current) {
+    if (step === 3 && ref.current) {
       ref.current.requestSubmit();
 
       return;
     }
 
-    if (step < 4) {
+    if (step < 3) {
       setStep((previous) => previous + 1);
     }
   }
@@ -215,35 +200,6 @@ export default function ContactDialog() {
 
                   <fieldset className={cn({ hidden: step !== 2 })}>
                     <legend className="mb-4">
-                      Möchten Sie Zusatzpakete buchen?
-                    </legend>
-
-                    <div className="grid grid-cols-2 gap-2">
-                      {extras.map((extra) => (
-                        <Checkbox
-                          key={extra.name}
-                          label={extra.name}
-                          checked={watch("extras").includes(extra.name)}
-                          description={extra.description}
-                          onChange={(name) => {
-                            const extras = getValues("extras");
-
-                            if (extras.includes(name)) {
-                              setValue(
-                                "extras",
-                                extras.filter((extra) => extra === name),
-                              );
-                            } else {
-                              setValue("extras", [...extras, name]);
-                            }
-                          }}
-                        />
-                      ))}
-                    </div>
-                  </fieldset>
-
-                  <fieldset className={cn({ hidden: step !== 3 })}>
-                    <legend className="mb-4">
                       Welchen Fahrzeugtyp haben Sie?
                     </legend>
 
@@ -267,7 +223,7 @@ export default function ContactDialog() {
                     ) : null}
                   </fieldset>
 
-                  <fieldset className={cn({ hidden: step !== 4 })}>
+                  <fieldset className={cn({ hidden: step !== 3 })}>
                     <legend className="mb-4">Ihre Daten</legend>
 
                     <div className="mb-4 flex flex-col gap-4 sm:flex-row">
@@ -381,14 +337,14 @@ export default function ContactDialog() {
                   {!state.sent ? (
                     <button
                       className="button-primary"
-                      form={step === 4 ? "details" : undefined}
+                      form={step === 3 ? "details" : undefined}
                       onClick={handleNext}
                       type="button"
                       disabled={loading}
                     >
                       {loading
                         ? "Bitte warten..."
-                        : step === 4
+                        : step === 3
                           ? "Anfrage senden"
                           : "Weiter"}
                     </button>

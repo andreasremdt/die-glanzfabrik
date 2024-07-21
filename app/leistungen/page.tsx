@@ -141,8 +141,8 @@ export default function Page() {
             </h2>
             <p itemProp="description">
               Mit unserem bequemen und beliebten Bring- & Holdienst Ihres
-              Fahrzeuges können Sie Ihre gewonnene Zeit in andere dingen wie zum
-              Beispiel in Sport, Arbeit oder Familie investieren.
+              Fahrzeuges können Sie Ihre gewonnene Zeit in andere Dinge, wie
+              z.B. in Familie, Hobby oder Arbeit investieren.
             </p>
           </article>
         </div>
