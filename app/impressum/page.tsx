@@ -1,17 +1,27 @@
 import type { Metadata } from "next";
 import FooterCta from "@/components/footer-cta";
 import PageHeader from "@/components/page-header";
+import { getPages } from "@/lib/queries";
 
-export const metadata: Metadata = {
-  title: "Impressum | Die Glanzfabrik",
-  description:
-    "Wir sind Spezialisten in der Autoreinigung und bieten Aussenreinigung, Innenreinigung, Autoaufbereitung, Geruchsentfernung, Versiegelung und mehr",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const page = await getPages({ where: { name: "Impressum" } });
 
-export default function Page() {
+  if (!page) return {};
+
+  return {
+    title: `${page.seoTitle} | Die Glanzfabrik`,
+    description: page.seoDescription,
+  };
+}
+
+export default async function Page() {
+  const page = await getPages({ where: { name: "Impressum" } });
+
+  if (!page) return null;
+
   return (
     <>
-      <PageHeader title="Impressum" />
+      <PageHeader title={page.name} />
 
       <div className="section grid grid-cols-1 gap-8 md:grid-cols-2">
         <div>

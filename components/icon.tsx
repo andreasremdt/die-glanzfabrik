@@ -11,7 +11,7 @@ export default function Icon(props: Props) {
       className="fancy-border w-max flex-shrink-0 rounded-xl bg-gradient-to-r from-transparent to-white/5 p-4"
       aria-hidden="true"
     >
-      <Image {...props} alt="" width={32} height={32} />
+      <Image {...props} alt="" width={32} height={32} aria-hidden="true" />
     </div>
   );
 }

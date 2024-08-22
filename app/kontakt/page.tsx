@@ -2,22 +2,30 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import PageHeader from "@/components/page-header";
 import ContactForm from "@/components/contact-form";
+import { getPages } from "@/lib/queries";
 
 let Leaflet = dynamic(() => import("@/components/leaflet-map"), { ssr: false });
 
-export const metadata: Metadata = {
-  title: "Kontakt | Die Glanzfabrik",
-  description:
-    "Wir erstellen Ihnen gerne ein individuelles Angebot für Ihr Fahrzeug. Nehmen Sie bequem Kontakt mit uns auf und wir kümmern uns um den Rest",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const page = await getPages({ where: { name: "Kontakt & Anfahrt" } });
 
-export default function Page() {
+  if (!page) return {};
+
+  return {
+    title: `${page.seoTitle} | Die Glanzfabrik`,
+    description: page.seoDescription,
+  };
+}
+
+export default async function Page() {
+  const page = await getPages({ where: { name: "Kontakt & Anfahrt" } });
+
+  if (!page) return null;
+
   return (
     <>
-      <PageHeader
-        title="Kontakt & Anfahrt"
-        description="Fragen, Anregungen oder Feedback? Wir freuen uns von Ihnen zu hören! Bitte zögern Sie nicht, uns telefonisch oder per E-Mail zu kontaktieren. Gerne können Sie auch unser Kontaktformular nutzen. Wir stehen Ihnen gerne zur Verfügung."
-      />
+      <PageHeader title={page.name} description={page.description} />
+
       <div className="section mb-4 grid grid-cols-1 gap-4 pb-0 md:gap-8 lg:-mb-28 lg:grid-cols-2">
         <div className="pt-6">
           <div className="mb-8 grid grid-cols-2 gap-8">
