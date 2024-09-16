@@ -100,7 +100,7 @@ export default async function Page() {
                 ) : null}
               </div>
 
-              <PricingTable prices={[79, 89, 89, 89, 89, 20]} />
+              {item.prices ? <PricingTable rows={item.prices} /> : null}
             </article>
           ))}
         </div>
@@ -175,7 +175,7 @@ export default async function Page() {
                 ) : null}
               </div>
 
-              <PricingTable prices={[79, 89, 89, 89, 89, 20]} />
+              {item.prices ? <PricingTable rows={item.prices} /> : null}
             </article>
           ))}
         </div>
