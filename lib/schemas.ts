@@ -35,7 +35,6 @@ export type ContactFormSchema = z.infer<typeof contactFormSchema>;
 
 export let requestOfferSchema = contactFormSchema.extend({
   package: z.string(),
-  extras: z.array(z.string()),
   carType: z.string(),
 });
 

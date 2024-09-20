@@ -49,7 +49,7 @@ const packages = [
 
 const cars = [
   { name: "Kleinwagen & 2-Sitzer" },
-  { name: "Mittelklasse & Sportwage" },
+  { name: "Mittelklasse & Sportwagen" },
   { name: "Oberklasse & Kombis" },
   { name: "SUVs & große Limousinen" },
   { name: "Nutzfahrzeuge, Vans & Pick-Ups" },
@@ -76,9 +76,7 @@ export default function ContactDialog() {
     reset,
     watch,
   } = useForm<RequestOfferSchema>({
-    defaultValues: {
-      extras: [],
-    },
+    defaultValues: {},
     resolver: zodResolver(requestOfferSchema),
   });
 
