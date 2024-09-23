@@ -18,7 +18,7 @@ export default async function fetcher<T>({
           : `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
       },
       body: JSON.stringify({ query, variables }),
-      next: { tags: [], revalidate: 60 },
+      next: { tags: ["content"], revalidate: 0 },
     },
   );
 
