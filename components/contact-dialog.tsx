@@ -14,7 +14,6 @@ import { type RequestOfferSchema, requestOfferSchema } from "@/lib/schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
 import RadioGroup from "@/components/radio-group";
 import { cn } from "@/lib/utils";
-import Checkbox from "@/components/checkbox";
 import Input from "@/components/input";
 import Textarea from "@/components/textarea";
 import Alert from "@/components/alert";
@@ -23,27 +22,27 @@ import requestOffer from "@/lib/request-offer";
 const packages = [
   {
     name: "Komplettpaket Basic",
-    description: "ab 199 CHF",
+    description: "ab 250 CHF",
   },
   {
     name: "Komplettpaket Premium",
-    description: "ab 399 CHF",
+    description: "ab 450 CHF",
   },
   {
     name: "Aussenreinigung Basic",
-    description: "ab 79 CHF",
+    description: "ab 90 CHF",
   },
   {
     name: "Aussenreinigung Premium",
-    description: "ab 149 CHF",
+    description: "ab 150 CHF",
   },
   {
     name: "Innenreinigung Basic",
-    description: "ab 129 CHF",
+    description: "ab 160 CHF",
   },
   {
     name: "Innenreinigung Premium",
-    description: "ab 259 CHF",
+    description: "ab 300 CHF",
   },
 ];
 
